@@ -1,0 +1,67 @@
+<h1>Customer List</h1>
+
+<table class="table table-striped table-bordered table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Ordernumber</th>
+      <th>Dateoforder</th>
+      <th>Orderstatus</th>
+      <th>Billingaddress</th>
+      <th>Shippingaddress</th>
+      <th>Sku</th>
+      <th>Mrp</th>
+      <th>Quantity</th>
+      <th>Discount</th>
+      <th>Netprice</th>
+      <th>Username</th>
+      <th>Phoneno</th>
+      <th>Addressline1</th>
+      <th>Addressline2</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Country</th>
+      <th>Pin</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @customers.each do |customer| %>
+      <tr>
+        <td><%= customer.Name %></td>
+        <td><%= customer.Phone %></td>
+        <td><%= customer.Email %></td>
+        <td><%= customer.Address %></td>
+        <td><%= customer.OrderNumber %></td>
+        <td><%= customer.DateOfOrder %></td>
+        <td><%= customer.OrderStatus %></td>
+        <td><%= customer.BillingAddress %></td>
+        <td><%= customer.ShippingAddress %></td>
+        <td><%= customer.SKU %></td>
+        <td><%= customer.MRP %></td>
+        <td><%= customer.Quantity %></td>
+        <td><%= customer.Discount %></td>
+        <td><%= customer.NetPrice %></td>
+        <td><%= customer.Username %></td>
+        <td><%= customer.Phoneno %></td>
+        <td><%= customer.AddressLine1 %></td>
+        <td><%= customer.Addressline2 %></td>
+        <td><%= customer.City %></td>
+        <td><%= customer.State %></td>
+        <td><%= customer.Country %></td>
+        <td><%= customer.Pin %></td>
+        <td><%= link_to 'Show', customer, class:"btn btn-secondary" %></td>
+        <td><%= link_to 'Edit', edit_customer_path(customer), class:"btn btn-secondary" %></td>
+        <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-secondary" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Customer', new_customer_path, class:"btn btn-secondary" %>

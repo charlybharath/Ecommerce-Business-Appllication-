@@ -1,0 +1,127 @@
+<%= form_with(model: customer) do |form| %>
+  <% if customer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
+
+      <ul>
+        <% customer.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.label :Name %>
+    <%= form.text_field :Name, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Phone %>
+    <%= form.number_field :Phone, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Email %>
+    <%= form.text_field :Email, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Address %>
+    <%= form.text_field :Address, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :OrderNumber %>
+    <%= form.text_field :OrderNumber, class:"form-control" %>
+  </div>
+  <br/>
+  <div class="field form-group">
+    <%= form.label :DateOfOrder %>
+    <%= form.date_select :DateOfOrder, class:"form-control" %>
+  </div>
+  <br/>
+  <div class="field form-group">
+    <%= form.label :OrderStatus %>
+    <%= form.text_field :OrderStatus, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :BillingAddress %>
+    <%= form.text_field :BillingAddress, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :ShippingAddress %>
+    <%= form.text_field :ShippingAddress, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :SKU %>
+    <%= form.text_field :SKU, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :MRP %>
+    <%= form.text_field :MRP, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Quantity %>
+    <%= form.number_field :Quantity, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Discount %>
+    <%= form.text_field :Discount, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :NetPrice %>
+    <%= form.text_field :NetPrice, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Username %>
+    <%= form.text_field :Username, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Phoneno %>
+    <%= form.number_field :Phoneno, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :AddressLine1 %>
+    <%= form.text_field :AddressLine1, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Addressline2 %>
+    <%= form.text_field :Addressline2, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :City %>
+    <%= form.text_field :City, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :State %>
+    <%= form.text_field :State, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Country %>
+    <%= form.text_field :Country, class:"form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :Pin %>
+    <%= form.number_field :Pin, class:"form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
